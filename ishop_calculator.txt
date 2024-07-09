@@ -1,0 +1,21 @@
+print("   **** Welcome to the ishop calculator ****")
+item_num=input("How many items are there in your basket today? ")
+print("\nlet's get counting them ....\n")
+items=[]
+prizes=[]
+for x in range(int(item_num)):
+   item=input(f"please tell me the name of the item number {x+1} ")
+   items.append(item) 
+   print(f"what is the prize of {item} ")
+   prizes.append(float(input("$")))
+response=input("would you like to see all entire basket items ?(yes/no) ")
+if(response.lower()=="no"):
+   print("OK\n")
+else:
+   print(items)
+response_prize=input("would you like to see how much it will cost ?(yes/no) ")
+if response_prize.lower()=="no":
+   print("press any key to exit\n")
+else:
+   print("buying these items will cost: ")
+   print(sum(prizes))
