@@ -1,0 +1,25 @@
+tasks=input("Enter tasks for today seprated by a comma: ").split(", ")
+on_going=[]
+done=[]
+for x in  tasks:
+    print(f"\n{x}\n")
+    response=input(f"Did you finish {x}? (yes/no)\n")
+    if response.lower()=="yes":
+        print("Nice job\n")
+        done.append(x)
+    else:
+        print("try not to put it off\n")
+        on_going.append(x)
+    print("--------------")
+progress=input("do you want to see your progress of today? (yes/no)\n")    
+if progress.lower()=="yes":
+   print("     ******** Done tasks ********\n")
+   print(done)
+   print("     ******** On going tasks ********\n")
+   print(on_going)
+        
+ 
+        
+     
+    
+    
