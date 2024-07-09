@@ -1,0 +1,67 @@
+import random
+wrong_choice=0
+print("Welcome to the Rock, Paper, Scissors game: ")
+beginning=input("Press Enter to continue or type (Help) for the rules: ")
+if(beginning.lower()=="help"):
+    print("       ********** RULES **********")
+    print("       1) You choose and the computer chooses")
+    print("       2) Rock smashes Scissors -> Rock wins")
+    print("       3) Scissors cuts paper -> Scissors wins")
+    print("       4) Paper covers Rock -> paper wins")
+user_choice=input("Enter your choice (Rock, Paper, Scissors): ")
+bot_choice=random.randint(0,2)
+rock = '''  
+    _______
+---'   ____)  
+      (_____)  
+      (_____)  
+      (____)
+---.__(___)  
+'''
+
+paper = '''  
+    _______
+---'   ____)____  
+          ______)  
+          _______)  
+         _______)
+---.__________)  
+'''
+
+scissors = '''  
+    _______
+---'   ____)____  
+          ______)  
+       __________)  
+      (____)
+---.__(___)  
+''' 
+if(user_choice.lower()=="paper"):
+ print("you chose: ")
+ print(paper)
+elif(user_choice.lower()=="rock"):
+  print("you chose: ")
+  print(rock)
+elif(user_choice.lower()=="scissors"):
+  print("you chose: ")
+  print(scissors)
+else:
+  print("Invalid choice. Please run the program again and chose Rock, Paper, or Scissors.")
+  wrong_choice=1
+if(wrong_choice==0):
+  print("computer chose: ")
+  if(bot_choice==0):
+    bot_choice="paper"
+    print(paper)
+  elif(bot_choice==1):
+   bot_choice="rock"
+   print(rock)
+  elif(bot_choice==2):                                                          
+   bot_choice="scissors"
+   print(scissors)
+  if((user_choice.lower()=="paper" and bot_choice=="rock") or (user_choice.lower()=="rock" and bot_choice=="scissors") or  (user_choice.lower()=="scissors" and bot_choice=="paper")):
+    print(f"you win. {user_choice} beats {bot_choice}")
+  elif((user_choice.lower()=="rock" and bot_choice=="paper") or (user_choice.lower()=="scissors" and bot_choice=="rock") or  (user_choice.lower()=="paper" and bot_choice=="scissors")):
+    print(f"you loss. {bot_choice} beats {user_choice}")
+  else:
+    print(f"Tie.")
