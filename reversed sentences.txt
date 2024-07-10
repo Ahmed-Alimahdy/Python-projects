@@ -1,0 +1,3 @@
+# sentence=input("Enter a sentence: ").split(" ")
+# reversed_sentence=sentence[::-1]
+# print(" ".join(reversed_sentence))

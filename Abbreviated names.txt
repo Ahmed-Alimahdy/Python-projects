@@ -1,0 +1,7 @@
+# names=input("Enter the first and last name of your friends seprated by a comma:").split(", ")
+# for x in names:
+#  print(x.split(" "))
+# print("Abbreviated names:") 
+# for y in names: 
+#  app_names=y.split(" ")
+#  print(f"{app_names[0][0].upper()}.{app_names[1][0].upper()}.")
