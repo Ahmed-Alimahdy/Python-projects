@@ -1,0 +1,10 @@
+import string
+sympols=string.punctuation
+new=""
+sentence=input("write a sentence: ")
+print("the sentence without punctuations: ")
+for x in sentence:
+    if(x not in sympols):
+        new+=x
+print(new)        
+    
