@@ -1,0 +1,9 @@
+import random
+random_num=random.randint(1,10)
+entered_num=int(input("Guess a number between 1 and 10: "))
+while entered_num !=random_num:
+    if(entered_num>random_num):
+        entered_num=int(input("Too high! Guess again: "))
+    else:
+          entered_num=int(input("Too low! Guess again: "))
+print("Congratulations, you guest the number!")          
