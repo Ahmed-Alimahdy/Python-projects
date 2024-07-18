@@ -1,0 +1,5 @@
+def multiply(number):
+    for x in range(11):
+        print(f"{number} x {x} = {int(number)*x}")
+num=input("Please enter a number: ")   
+multiply(num)
