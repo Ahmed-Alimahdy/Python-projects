@@ -1,0 +1,54 @@
+import string
+                             ################    encrypt   ################ 
+# def encryption(word,shift_num):
+#  encrypted_word=""
+#  alphabet=string.ascii_lowercase
+#  for letter in word:
+#   if letter.lower() in alphabet:
+#    original_position=alphabet.index(letter.lower())
+#    position=original_position+shift_num
+#    if(position>=len(alphabet)):
+#     position=position-len(alphabet)
+#    if letter.isupper():
+#     encrypted_word+=alphabet[position].upper()
+#    else:
+#     encrypted_word+=alphabet[position]
+#   # elif letter in alphabet.upper():
+#   #   original_position=alphabet.upper().index(letter)
+#   #   position=original_position+shift_num
+#   #   if(position>=len(alphabet)):
+#   #    position=position-len(alphabet)
+#   #   encrypted_word+=alphabet[position].upper()
+#   else:
+#     encrypted_word+=letter
+#  print(f"here is the encrypted word: {encrypted_word}")  
+# word=input("Enter the word: ")
+# shift_num=input("Enter the shift number: ")
+# encryption(word,int(shift_num))
+                            ################    decrypt   ################ 
+def encryption(word,shift_num):
+ encrypted_word=""
+ alphabet=string.ascii_lowercase
+ for letter in word:
+  if letter.lower() in alphabet:
+   original_position=alphabet.index(letter.lower())
+   position=original_position-shift_num
+   if(position>=len(alphabet)):
+    position=position-len(alphabet)
+   if letter.isupper():
+    encrypted_word+=alphabet[position].upper()
+   else:
+    encrypted_word+=alphabet[position]
+#   elif letter in alphabet.upper():
+#     original_position=alphabet.upper().index(letter)
+#     position=original_position+shift_num
+#     if(position>=len(alphabet)):
+#      position=position-len(alphabet)
+#     encrypted_word+=alphabet[position].upper()
+  else:
+    encrypted_word+=letter
+ print(f"here is the encrypted word: {encrypted_word}")  
+word=input("Enter the word: ")
+shift_num=input("Enter the shift number: ")
+encryption(word,int(shift_num))
+
